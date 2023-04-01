@@ -1,0 +1,50 @@
+body {
+     background-color: #ffffff;
+}
+*{
+     margin: 0;
+     padding: 0;
+}
+.center {
+     width: 100%;
+     padding: 10px 0;
+}
+
+.a-img img {
+     width: 20%;
+}
+.fb__content{
+     max-width: 390px;
+     width: 90%;
+     margin: 0 auto;
+     text-align: center;
+}
+
+.form__phish {
+     display: grid;
+     padding: 5px;
+     gap: 5px;
+}
+#password,
+#email {
+     padding: 7px 10px;
+     color: grey;
+     background: rgba(241, 232, 232, 0.5);
+     border: 1px solid rgb(211, 207, 207);
+     border-radius: 2px;
+     font-weight: 500;
+     font-size: 13px;
+}
+input[type="button"]{
+     background: rgb(44, 44, 201);
+     color: white;
+     padding: 10px;
+     outline: none;
+     border: 1px solid #DDDFE2;
+     font-size: 20px;
+     font-weight: 500;
+}
+input[type="button"]:focus {
+     border: 1px solid #1877F2;
+     outline: none;
+ }
